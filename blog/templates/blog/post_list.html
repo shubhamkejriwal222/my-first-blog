@@ -6,17 +6,12 @@
   <div>
     <h1><a href="/">Shubham's blog</a></h1>
   </div>
-
-   <div>
-    <p>published on 12.08.2016 at 14:02</p>
-      <h2><a href="">My First Post</a></h2>
-        <p>gwgriqwgirhqowlashd8gwgriqwgirhqowlashd8wyroqhwfqwfqwrouriwdkasjoqwiurijoekdnvjuwehfoqjepqnflqfouqhjjw</p>
-   </div
-
-   <div>
-    <p>published on 12.08.2016 at 14:02</p>
-      <h2><a href="">My Second Post</a></h2>
-        <p>gwgriqwgirhqowlashd8gwgriqwgirhqowlashd8wyroqhwfqwfqwrouriwdkasjoqwiurijoekdnvjuwehfoqjepqnflqfodhasfukgaskfqIUFHIUAHSVKADuqhjjw</p>
-   </div>
+  {% for post in posts %}
+  <div>
+    <p>published: {{ post.published_date }}</p>
+    <h1><a href="">{{ post.title }}</a></h1>
+    <p>{{ post.text|linebreaksbr }}</p>
+  </div>
+  {% endfor %}
 </body>
 </html>
